@@ -131,7 +131,7 @@ while running:
                 print("Student no found")
 
         elif choice == 5:
-            id = int(input("Enter the student ID of the student you want to delete: ")).strip()
+            id = int(input("Enter the student ID of the student you want to delete: "))
             if delete_product(db, id):
                 print("Product deleted successfully.")
             else:
