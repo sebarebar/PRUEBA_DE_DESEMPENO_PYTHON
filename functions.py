@@ -1,14 +1,15 @@
 def register_student(db, id, name, ege, course, status):
     student = {
-        'id': id, 
-        'name':name,
-        'age':ege,
-        'course':course,
-        'status' :status
+        'id': id,
+        'name': name,
+        'age': ege,
+        'course': course,
+        'status': status
     }
     db.append(student)
-    
+
     return db
+
 
 def consult_list(db):
 
@@ -25,13 +26,15 @@ def consult_list(db):
             print(f"status: {student['status']}")
             print("──────────────────────────────")
 
+
 def search_student(db, id):
-     for student in db:
+    for student in db:
         if student['id'] == id:
             return student
-        return None
-     
-def update_student(db, id,new_name,new_age=None, new_course=None, new_status=None):
+    return None
+
+
+def update_student(db, id, new_name, new_age=None, new_course=None, new_status=None):
 
     for student in db:
         if student['id'] == id:
@@ -44,13 +47,14 @@ def update_student(db, id,new_name,new_age=None, new_course=None, new_status=Non
 
             if new_course is not None:
                 student['course'] = new_course
-            
+
             if new_status is not None:
                 student['status'] = new_status
 
             return True
-            
+
     return False
+
 
 def delete_product(db, id):
 
