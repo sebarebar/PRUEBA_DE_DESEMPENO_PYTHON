@@ -29,17 +29,17 @@ def upload_list(path):
             invalid_rows = 0
             for row in reader:
                 try:
-                    id = row['id']
+                    id = int(row['id'])
                     name = row['name']
                     age = int(row['age'])
                     course = row['course']
                     status = row['status']
-                    
-                    if age< 0:
+
+                    if age < 0:
                         raise ValueError(
                             "Price and quantity must be non-negative.")
                     db.append(
-                        {'id': id, 'name': name, 'age': age, 'course': course, 'status':status})
+                        {'id': id, 'name': name, 'age': age, 'course': course, 'status': status})
                 except ValueError as e:
                     print(f"Warning: Skipping invalid row: {row} - Error: {e}")
                     invalid_rows += 1
