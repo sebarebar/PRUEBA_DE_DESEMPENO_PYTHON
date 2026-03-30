@@ -14,9 +14,9 @@ while running:
         print("3. search student")
         print("4. update student")
         print("5. remove student")
-        print("7. save students")
-        print("8. upload student list")
-        print("9. Exit")
+        print("6. save students")
+        print("7. upload student list")
+        print("8. Exit")
         print("────────────────────────────────────────")
         try:
             choice = int(input("choose the option you want to make.: "))
