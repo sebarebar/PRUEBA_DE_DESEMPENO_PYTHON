@@ -31,7 +31,7 @@ def upload_list(path):
                 try:
                     id = row['id']
                     name = row['name']
-                    age = int(row['price'])
+                    age = int(row['age'])
                     course = row['course']
                     status = row['status']
                     
