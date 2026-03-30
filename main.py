@@ -155,20 +155,20 @@ while running:
                 db.extend(loaded)
             elif csv_choice == 'no':
                 for product in loaded:
-                    existing = search_student(db, id['id'])
+                    existing = search_student(db, student['id'])
                     if existing:
                         existing['name'] += student['name']
                         existing['age'] = student['age']
                         existing['course'] = student['course']
                         existing['status'] = student['status']
                     else:
-                        db.append(product)
+                        db.append(student)
 
-            print(f"product loaded: {len(loaded)}")
+            print(f"student loaded: {len(loaded)}")
             if csv_choice == 'yes':
                 print("list overwritten with loaded data.")
             elif csv_choice == 'no':
-                print("Loaded products merged with existing inventory.")
+                print("Loaded student list merged with existing inventory.")
 
 
         elif choice == 8:
